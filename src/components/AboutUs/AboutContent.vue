@@ -175,7 +175,7 @@
 
 </template>
 
-<script>
+<script lang="ts">
 import org1 from '@/assets/images/photo/org1.png';
 import org2 from '@/assets/images/photo/org2.png';
 import org3 from '@/assets/images/photo/org3.png';
@@ -193,7 +193,7 @@ export default {
   name: 'AboutContent',
   data() {
     return {
-      activeCard: null,
+      activeCard: null as number | null,
       authors: [
         {
           id: 1,

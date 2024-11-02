@@ -98,18 +98,18 @@
       </section>
 
       <div class="mb-8">
-        <SpecialPost />
+        <SpecialContent/>
       </div>
 
       <!-- Additional Components -->
       <div class="mb-8">
-        <Category />
+        <CategoryContent />
       </div>
       <div class="mb-8">
         <List />
       </div>
       <div class="mb-10">
-        <Testi />
+        <TestiContent />
       </div>
       <div class="mb-8">
         <Join/>
@@ -121,9 +121,9 @@
 <script setup lang="ts">
 import MainLayout from '@/layouts/MainLayout.vue';
 import FeaturedPosts from '@/components/HomePage/FeaturedPosts.vue';
-import Category from '@/components/HomePage/Category.vue';
+import CategoryContent from '@/components/HomePage/CategoryContent.vue';
 import List from '@/components/HomePage/List.vue';
-import Testi from '@/components/HomePage/Testi.vue';
-import SpecialPost from '@/components/HomePage/Special.vue';
+import SpecialContent from '@/components/HomePage/SpecialContent.vue';
 import Join from '@/components/JoinContent.vue';
+import TestiContent from '@/components/HomePage/TestiContent.vue';
 </script>

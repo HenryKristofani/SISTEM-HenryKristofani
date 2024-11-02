@@ -81,7 +81,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import blog1 from '@/assets/images/misc/blog1.png';
 import blog2 from '@/assets/images/misc/blog2.png';
 import blog3 from '@/assets/images/misc/blog3.png';

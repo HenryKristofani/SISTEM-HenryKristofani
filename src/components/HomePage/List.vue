@@ -6,16 +6,14 @@
     </h1>
     <main class="mt-12 w-full max-md:mt-10 max-md:max-w-full">
       <div class="flex gap-10 justify-center max-md:flex-col">
-        <article
-          v-for="author in authors"
-          :key="author.id"
+        <article v-for="author in authors" :key="author.id"
           class="flex flex-col w-1/5 items-center max-md:ml-0 max-md:w-full transition-transform duration-300 transform hover:scale-105"
-          @mousedown="activeCard = author.id"
-          @mouseup="activeCard = null"
-          :class="{ 'bg-active': activeCard === author.id }"
-        >
-          <div class="flex flex-col grow items-center px-6 py-8 w-full leading-none max-md:px-5 max-md:mt-8 rounded-lg bg-zinc-100">
-            <img :src="author.image" :alt="author.name" loading="lazy" class="object-contain w-24 h-24 max-w-full rounded-full aspect-square" />
+          @mousedown="activeCard = author.id" @mouseup="activeCard = null"
+          :class="{ 'bg-active': activeCard === author.id }">
+          <div
+            class="flex flex-col grow items-center px-6 py-8 w-full leading-none max-md:px-5 max-md:mt-8 rounded-lg bg-zinc-100">
+            <img :src="author.image" :alt="author.name" loading="lazy"
+              class="object-contain w-24 h-24 max-w-full rounded-full aspect-square" />
             <h2 class="mt-5 text-xl font-bold tracking-tighter text-gray-800">
               {{ author.name }}
             </h2>
@@ -23,7 +21,8 @@
               Content Writer @Company
             </p>
             <div class="flex gap-2 mt-3">
-              <a v-for="(icon, index) in author.socialIcons" :key="index" :href="icon.link" class="text-gray-500 transition-colors duration-300 hover:text-blue-600">
+              <a v-for="(icon, index) in author.socialIcons" :key="index" :href="icon.link"
+                class="text-gray-500 transition-colors duration-300 hover:text-blue-600">
                 <img :src="icon.iconSrc" class="w-5 h-5" alt="Social Icon" />
               </a>
             </div>
@@ -32,50 +31,31 @@
       </div>
     </main>
 
-    <section data-layername="logoComponent" class="flex flex-wrap gap-10 items-start text-zinc-500" aria-labelledby="featured-section-title">
+    <section data-layername="logoComponent" class="flex flex-wrap gap-10 items-start text-zinc-500"
+      aria-labelledby="featured-section-title">
       <header class="flex flex-col self-start mt-0">
         <h2 id="featured-section-title">
           <span class="self-start text-sm leading-none opacity-60">We are</span>
           <span class="block text-2xl font-bold leading-none">Featured in</span>
         </h2>
       </header>
-      
+
       <!-- Adjusted logo images with specific size control -->
-      <img 
-        loading="lazy" 
-        src="@/assets/images/logo/logo1.png" 
-        alt="Featured publication logo 1"
-        class="object-contain grow shrink-0 my-auto w-24 h-auto max-md:max-w-full" 
-      />
-      <img 
-        loading="lazy" 
-        src="@/assets/images/logo/logo2.png" 
-        alt="Featured publication logo 2"
-        class="object-contain grow shrink-0 my-auto w-24 h-auto max-md:max-w-full" 
-      />
-      <img 
-        loading="lazy" 
-        src="@/assets/images/logo/logo3.png" 
-        alt="Featured publication logo 3"
-        class="object-contain grow shrink-0 my-auto w-24 h-auto max-md:max-w-full" 
-      />
-      <img 
-        loading="lazy" 
-        src="@/assets/images/logo/logo4.png" 
-        alt="Featured publication logo 4"
-        class="object-contain grow shrink-0 my-auto w-24 h-auto max-md:max-w-full" 
-      />
-      <img 
-        loading="lazy" 
-        src="@/assets/images/logo/logo5.png" 
-        alt="Featured publication logo 5"
-        class="object-contain grow shrink-0 my-auto w-24 h-auto max-md:max-w-full" 
-      />
+      <img loading="lazy" src="@/assets/images/logo/logo1.png" alt="Featured publication logo 1"
+        class="object-contain grow shrink-0 my-auto w-24 h-auto max-md:max-w-full" />
+      <img loading="lazy" src="@/assets/images/logo/logo2.png" alt="Featured publication logo 2"
+        class="object-contain grow shrink-0 my-auto w-24 h-auto max-md:max-w-full" />
+      <img loading="lazy" src="@/assets/images/logo/logo3.png" alt="Featured publication logo 3"
+        class="object-contain grow shrink-0 my-auto w-24 h-auto max-md:max-w-full" />
+      <img loading="lazy" src="@/assets/images/logo/logo4.png" alt="Featured publication logo 4"
+        class="object-contain grow shrink-0 my-auto w-24 h-auto max-md:max-w-full" />
+      <img loading="lazy" src="@/assets/images/logo/logo5.png" alt="Featured publication logo 5"
+        class="object-contain grow shrink-0 my-auto w-24 h-auto max-md:max-w-full" />
     </section>
   </section>
 </template>
 
-<script>
+<script lang="ts">
 import org1 from '@/assets/images/photo/org1.png';
 import org2 from '@/assets/images/photo/org2.png';
 import org3 from '@/assets/images/photo/org3.png';
@@ -89,7 +69,7 @@ export default {
   name: 'LogoAndAuthors',
   data() {
     return {
-      activeCard: null,
+      activeCard: null as number | null,
       authors: [
         {
           id: 1,
@@ -143,7 +123,8 @@ export default {
 
 <style scoped>
 .bg-active {
-  background-color: #fde68a; /* Warna efek aktif */
+  background-color: #fde68a;
+  /* Warna efek aktif */
   transition: background-color 0.3s ease;
 }
 

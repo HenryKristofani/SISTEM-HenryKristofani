@@ -49,9 +49,9 @@
   </footer>
 </template>
 
-<script>
+<script lang="ts">
 export default {
-  name: 'Footer',
+  name: 'FooterContent',
   methods: {
     handleSubmit() {
       // Handle form submission
